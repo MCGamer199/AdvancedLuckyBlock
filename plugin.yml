@@ -1,0 +1,174 @@
+name: LuckyBlock
+main: com.LuckyBlock.Engine.LuckyBlock
+version: 1.9.2
+
+load: STARTUP
+
+commands:
+   lb:
+      description: Lucky Block Commands.
+      #permission: lb.commands
+      #permission-message: You don't have <permission>
+   lbw:
+      description: Lucky Block War Commands.
+   teams:
+      description: Teams Commands.
+    
+permissions:
+   lb.commands:
+      default: op
+   lb.commands.addlore:
+      default: op
+   lb.commands.gift:
+      default: op
+      description: Allows you to open a gift.
+   lb.commands.clearlbs:
+      default: op
+   lb.commands.luckyblock:
+      default: op
+   lb.commands.removelore:
+      default: op
+   lb.commands.renameitem:
+      default: op
+   lb.commands.rider:
+      default: op
+   lb.commands.setchance:
+      default: op
+   lb.commands.setluck:
+      default: op
+   lb.place:
+      default: op
+   lb.break:
+      default: op
+   lb.craftlb:
+      default: op
+   lb.commands.removebp:
+      default: op
+   lb.commands.reload:
+      default: op
+   lb.silktouch:
+      default: true
+   lbw.kits.vip:
+      default: op
+   lb.commands.setowner:
+      default: op
+   lb.breakall:
+      default: op
+   lbw.commands:
+      default: true
+   lbw.join:
+      default: op
+   lbw.leave:
+      default: op
+   lbw.joinfull:
+      default: op
+   lbw.commands.setmaxplayers:
+      default: op
+   lbw.commands.forcestart:
+      default: op
+   lbw.commands.setmainlobby:
+      default: op
+   lbw.commands.setlobby:
+      default: op
+   lbw.commands.lobby:
+      default: true
+   lbw.commands.removegame:
+      default: op
+   lbw.commands.cleargames:
+      default: op
+   lbw.commands.setspawn:
+      default: op
+   lbw.commands.setenabled:
+      default: op
+   lbw.commands.endgame:
+      default: op
+   lbw.commands.setminplayers:
+      default: op
+   lbw.changename.me:
+      default: op
+   lbw.changename.others:
+      default: op
+   lbw.colorcodes:
+      default: op
+   lbw.commands.setlevel:
+      default: op
+   lbw.getplayer:
+      default: true
+   lbw.save:
+      default: op
+   lbw.commands.setbounds:
+      default: op
+   lbw.vip:
+      default: op
+   lbw.commands.endall:
+      default: op
+   lbw.commands.setcenter:
+      default: op
+   lbw.commands.creategame:
+      default: op
+   lbw.commands.setgamename:
+      default: op
+   teams.commands:
+      default: true
+   teams.create:
+      default: op
+   teams.remove:
+      default: op
+   teams.clear:
+      default: op
+   teams.join:
+      default: true
+   teams.leave:
+      default: true
+   teams.requests:
+      default: true
+   teams.accept:
+      default: true
+   teams.kick:
+      default: op
+   teams.setowner:
+      default: op
+   lbw.commands.tpworld:
+      default: op
+   lbw.commands.adddblock:
+      default: op
+   lb.usedetector:
+      default: true
+   lb.commands.setrange:
+      default: op
+   lb.commands.types:
+      default: op
+   lb.commands.money:
+      default: true
+   lb.commands.setmoney:
+      default: op
+   lb.commands.gold:
+      default: true
+   lb.commands.setgold:
+      default: op
+   lb.commands.thoraxe:
+      default: op
+   lb.commands.detector:
+      default: op
+   lb.useportal:
+      default: true
+   lb.createportal:
+      default: true
+   lb.commands.world:
+      default: op
+   lbw.runcommandsingame:
+      default: op
+   lbw.commands.setallowgates:
+      default: op
+   lbw.commands.settype:
+      default: op
+   lbw.commands.clearspawns:
+      default: op
+   lb.vip:
+      default: op
+   lb.commands.getfile:
+      default: op
+   lb.commands.rules:
+      default: true
+   lb.gui:
+      default: op
