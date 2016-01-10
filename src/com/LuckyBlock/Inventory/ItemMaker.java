@@ -3,12 +3,12 @@ package com.LuckyBlock.Inventory;
 import com.LuckyBlock.Engine.LuckyBlock;
 import com.LuckyBlock.Inventory.AttributeName.AttributeType;
 import com.LuckyBlock.Inventory.AttributeName.OperationType;
-import net.minecraft.server.v1_8_R3.NBTTagCompound;
-import net.minecraft.server.v1_8_R3.NBTTagInt;
-import net.minecraft.server.v1_8_R3.NBTTagList;
-import net.minecraft.server.v1_8_R3.NBTTagString;
+import net.minecraft.server.v1_8_R1.NBTTagCompound;
+import net.minecraft.server.v1_8_R1.NBTTagInt;
+import net.minecraft.server.v1_8_R1.NBTTagList;
+import net.minecraft.server.v1_8_R1.NBTTagString;
 import org.bukkit.Material;
-import org.bukkit.craftbukkit.v1_8_R3.inventory.CraftItemStack;
+import org.bukkit.craftbukkit.v1_8_R1.inventory.CraftItemStack;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.EnchantmentStorageMeta;
@@ -175,7 +175,7 @@ public class ItemMaker {
      */
     public static ItemStack createSkull(ItemStack item, String id, String value) {
         if (LuckyBlock.bukkitVersion[1] > 7) {
-            net.minecraft.server.v1_8_R3.ItemStack ii = CraftItemStack.asNMSCopy(item);
+            net.minecraft.server.v1_8_R1.ItemStack ii = CraftItemStack.asNMSCopy(item);
             NBTTagCompound tag;
             if (ii.hasTag()) {
                 tag = ii.getTag();
@@ -205,7 +205,7 @@ public class ItemMaker {
      * @see ItemMaker
      */
     public static ItemStack makeUnbreakable(ItemStack item) {
-        net.minecraft.server.v1_8_R3.ItemStack it = CraftItemStack.asNMSCopy(item);
+        net.minecraft.server.v1_8_R1.ItemStack it = CraftItemStack.asNMSCopy(item);
         NBTTagCompound tag;
         if (it.hasTag()) {
             tag = it.getTag();
@@ -229,7 +229,7 @@ public class ItemMaker {
      * @see ItemMaker
      */
     public static ItemStack addAttribute(ItemStack item, AttributeType attributeType, OperationType operationType, String name, int amount) {
-        net.minecraft.server.v1_8_R3.ItemStack it = CraftItemStack.asNMSCopy(item);
+        net.minecraft.server.v1_8_R1.ItemStack it = CraftItemStack.asNMSCopy(item);
         NBTTagCompound tag;
         if (it.hasTag()) {
             tag = it.getTag();

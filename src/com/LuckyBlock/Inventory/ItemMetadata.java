@@ -1,7 +1,7 @@
 package com.LuckyBlock.Inventory;
 
-import net.minecraft.server.v1_8_R3.NBTTagCompound;
-import org.bukkit.craftbukkit.v1_8_R3.inventory.CraftItemStack;
+import net.minecraft.server.v1_8_R1.NBTTagCompound;
+import org.bukkit.craftbukkit.v1_8_R1.inventory.CraftItemStack;
 import org.bukkit.inventory.ItemStack;
 
 public class ItemMetadata {
@@ -20,7 +20,7 @@ public class ItemMetadata {
 
     public void addMetadata(String name, String value) {
         if (item != null) {
-            net.minecraft.server.v1_8_R3.ItemStack i = CraftItemStack.asNMSCopy(item);
+            net.minecraft.server.v1_8_R1.ItemStack i = CraftItemStack.asNMSCopy(item);
             NBTTagCompound tag;
             if (i.hasTag()) {
                 tag = i.getTag();
@@ -37,7 +37,7 @@ public class ItemMetadata {
 
     public void addMetadata(String name, int value) {
         if (item != null) {
-            net.minecraft.server.v1_8_R3.ItemStack i = CraftItemStack.asNMSCopy(item);
+            net.minecraft.server.v1_8_R1.ItemStack i = CraftItemStack.asNMSCopy(item);
             NBTTagCompound tag;
             if (i.hasTag()) {
                 tag = i.getTag();
@@ -54,7 +54,7 @@ public class ItemMetadata {
 
     public void addMetadata(String name, boolean value) {
         if (item != null) {
-            net.minecraft.server.v1_8_R3.ItemStack i = CraftItemStack.asNMSCopy(item);
+            net.minecraft.server.v1_8_R1.ItemStack i = CraftItemStack.asNMSCopy(item);
             NBTTagCompound tag;
             if (i.hasTag()) {
                 tag = i.getTag();
@@ -71,7 +71,7 @@ public class ItemMetadata {
 
     public void addMetadata(String name, float value) {
         if (item != null) {
-            net.minecraft.server.v1_8_R3.ItemStack i = CraftItemStack.asNMSCopy(item);
+            net.minecraft.server.v1_8_R1.ItemStack i = CraftItemStack.asNMSCopy(item);
             NBTTagCompound tag;
             if (i.hasTag()) {
                 tag = i.getTag();
@@ -88,7 +88,7 @@ public class ItemMetadata {
 
     public void addMetadata(String name, double value) {
         if (item != null) {
-            net.minecraft.server.v1_8_R3.ItemStack i = CraftItemStack.asNMSCopy(item);
+            net.minecraft.server.v1_8_R1.ItemStack i = CraftItemStack.asNMSCopy(item);
             NBTTagCompound tag;
             if (i.hasTag()) {
                 tag = i.getTag();
@@ -105,7 +105,7 @@ public class ItemMetadata {
 
     public void addMetadata(String name, int[] value) {
         if (item != null) {
-            net.minecraft.server.v1_8_R3.ItemStack i = CraftItemStack.asNMSCopy(item);
+            net.minecraft.server.v1_8_R1.ItemStack i = CraftItemStack.asNMSCopy(item);
             NBTTagCompound tag;
             if (i.hasTag()) {
                 tag = i.getTag();
@@ -122,7 +122,7 @@ public class ItemMetadata {
 
     public void addMetadata(String name, long value) {
         if (item != null) {
-            net.minecraft.server.v1_8_R3.ItemStack i = CraftItemStack.asNMSCopy(item);
+            net.minecraft.server.v1_8_R1.ItemStack i = CraftItemStack.asNMSCopy(item);
             NBTTagCompound tag;
             if (i.hasTag()) {
                 tag = i.getTag();
@@ -140,7 +140,7 @@ public class ItemMetadata {
     public boolean hasMetadata(String name) {
         boolean b = false;
         if (item != null) {
-            net.minecraft.server.v1_8_R3.ItemStack i = CraftItemStack.asNMSCopy(item);
+            net.minecraft.server.v1_8_R1.ItemStack i = CraftItemStack.asNMSCopy(item);
             if (i.hasTag()) {
                 NBTTagCompound tag = i.getTag();
                 if (tag.hasKey(name)) {
@@ -154,7 +154,7 @@ public class ItemMetadata {
     public String getMetadataAsString(String name) {
         String value = "";
         if (item != null) {
-            net.minecraft.server.v1_8_R3.ItemStack i = CraftItemStack.asNMSCopy(item);
+            net.minecraft.server.v1_8_R1.ItemStack i = CraftItemStack.asNMSCopy(item);
             if (i.hasTag()) {
                 NBTTagCompound tag = i.getTag();
                 value = tag.getString(name);
@@ -166,7 +166,7 @@ public class ItemMetadata {
     public int getMetadataAsInt(String name) {
         int value = 0;
         if (item != null) {
-            net.minecraft.server.v1_8_R3.ItemStack i = CraftItemStack.asNMSCopy(item);
+            net.minecraft.server.v1_8_R1.ItemStack i = CraftItemStack.asNMSCopy(item);
             if (i.hasTag()) {
                 NBTTagCompound tag = i.getTag();
                 value = tag.getInt(name);
@@ -178,7 +178,7 @@ public class ItemMetadata {
     public boolean getMetadataAsBoolean(String name) {
         boolean value = false;
         if (item != null) {
-            net.minecraft.server.v1_8_R3.ItemStack i = CraftItemStack.asNMSCopy(item);
+            net.minecraft.server.v1_8_R1.ItemStack i = CraftItemStack.asNMSCopy(item);
             if (i.hasTag()) {
                 NBTTagCompound tag = i.getTag();
                 value = tag.getBoolean(name);
@@ -190,7 +190,7 @@ public class ItemMetadata {
     public float getMetadataAsFloat(String name) {
         float value = 0;
         if (item != null) {
-            net.minecraft.server.v1_8_R3.ItemStack i = CraftItemStack.asNMSCopy(item);
+            net.minecraft.server.v1_8_R1.ItemStack i = CraftItemStack.asNMSCopy(item);
             if (i.hasTag()) {
                 NBTTagCompound tag = i.getTag();
                 value = tag.getFloat(name);
@@ -202,7 +202,7 @@ public class ItemMetadata {
     public double getMetadataAsDouble(String name) {
         double value = 0;
         if (item != null) {
-            net.minecraft.server.v1_8_R3.ItemStack i = CraftItemStack.asNMSCopy(item);
+            net.minecraft.server.v1_8_R1.ItemStack i = CraftItemStack.asNMSCopy(item);
             if (i.hasTag()) {
                 NBTTagCompound tag = i.getTag();
                 value = tag.getDouble(name);
@@ -214,7 +214,7 @@ public class ItemMetadata {
     public int[] getMetadataAsIntArray(String name) {
         int[] value = new int[1];
         if (item != null) {
-            net.minecraft.server.v1_8_R3.ItemStack i = CraftItemStack.asNMSCopy(item);
+            net.minecraft.server.v1_8_R1.ItemStack i = CraftItemStack.asNMSCopy(item);
             if (i.hasTag()) {
                 NBTTagCompound tag = i.getTag();
                 value = tag.getIntArray(name);
@@ -226,7 +226,7 @@ public class ItemMetadata {
     public long getMetadataAsLong(String name) {
         long value = 0;
         if (item != null) {
-            net.minecraft.server.v1_8_R3.ItemStack i = CraftItemStack.asNMSCopy(item);
+            net.minecraft.server.v1_8_R1.ItemStack i = CraftItemStack.asNMSCopy(item);
             if (i.hasTag()) {
                 NBTTagCompound tag = i.getTag();
                 value = tag.getLong(name);
@@ -237,7 +237,7 @@ public class ItemMetadata {
 
     public void removeMetadata(String name) {
         if (item != null) {
-            net.minecraft.server.v1_8_R3.ItemStack i = CraftItemStack.asNMSCopy(item);
+            net.minecraft.server.v1_8_R1.ItemStack i = CraftItemStack.asNMSCopy(item);
             NBTTagCompound tag;
             if (i.hasTag()) {
                 tag = i.getTag();
