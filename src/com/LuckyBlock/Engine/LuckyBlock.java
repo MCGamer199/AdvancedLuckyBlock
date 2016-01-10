@@ -173,7 +173,7 @@ public class LuckyBlock extends JavaPlugin implements Listener {
 
     public static void patch() {
     /*
-		   try {
+           try {
 		      Method a = net.minecraft.server.v1_8_R1.EntityTypes.class.getDeclaredMethod("a", Class.class, String.class, int.class);
 		      a.setAccessible(true);
 

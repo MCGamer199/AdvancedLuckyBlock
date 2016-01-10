@@ -17,6 +17,7 @@ public class Soldier extends CustomEntities {
 
     public static List<UUID> soldiers = new ArrayList<UUID>();
     private LivingEntity target;
+
     public Soldier(SpawnWay way) {
         if (way == SpawnWay.DEFAULT) {
             setItemInHand(new ItemStack(Material.DIAMOND_SWORD));

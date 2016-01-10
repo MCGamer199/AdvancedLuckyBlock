@@ -42,6 +42,11 @@ public class Time {
         return hour;
     }
 
+    public void setHour(byte hour) {
+        this.hour = hour;
+        reloadTime();
+    }
+
     public void setHour(int hour) {
         this.hour = (byte) hour;
         reloadTime();
@@ -49,6 +54,11 @@ public class Time {
 
     public byte getSecond() {
         return second;
+    }
+
+    public void setSecond(byte second) {
+        this.second = second;
+        reloadTime();
     }
 
     public void setSecond(int second) {
@@ -60,6 +70,11 @@ public class Time {
         return min;
     }
 
+    public void setMin(byte min) {
+        this.min = min;
+        reloadTime();
+    }
+
     public void setMin(int min) {
         this.min = (byte) min;
         reloadTime();
@@ -69,6 +84,11 @@ public class Time {
         return day;
     }
 
+    public void setDay(int day) {
+        this.day = (byte) day;
+        reloadTime();
+    }
+
     public void setDay(byte day) {
         this.day = day;
         reloadTime();
@@ -76,6 +96,11 @@ public class Time {
 
     public byte getMonth() {
         return month;
+    }
+
+    public void setMonth(int month) {
+        this.month = (byte) month;
+        reloadTime();
     }
 
     public void setMonth(byte month) {
@@ -104,31 +129,6 @@ public class Time {
             total = second * (min + 1) * (hour + 1) * (day + 1) * (month + 1) * (year + 1);
         }
         return total;
-    }
-
-    public void setHour(byte hour) {
-        this.hour = hour;
-        reloadTime();
-    }
-
-    public void setMin(byte min) {
-        this.min = min;
-        reloadTime();
-    }
-
-    public void setSecond(byte second) {
-        this.second = second;
-        reloadTime();
-    }
-
-    public void setDay(int day) {
-        this.day = (byte) day;
-        reloadTime();
-    }
-
-    public void setMonth(int month) {
-        this.month = (byte) month;
-        reloadTime();
     }
 
     public void reset() {
