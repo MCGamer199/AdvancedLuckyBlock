@@ -45,10 +45,7 @@ import org.bukkit.potion.PotionEffectType;
 import org.bukkit.util.Vector;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.UUID;
+import java.util.*;
 
 
 @SuppressWarnings("deprecation")
@@ -1706,7 +1703,7 @@ public class SomeEvents implements Listener {
                 if (item.hasItemMeta()) {
                     if (item.getItemMeta().hasEnchant(LuckyBlock.lightning)) {
                         Player player = event.getPlayer();
-                        if (player.getTargetBlock(null, 200) != null && player.getTargetBlock(null, 200).getType() != Material.AIR) {
+                        if (player.getTargetBlock((Set<Material>) null, 200) != null && player.getTargetBlock((Set<Material>) null, 200).getType() != Material.AIR) {
                             int level = item.getEnchantmentLevel(LuckyBlock.lightning);
                             if (player.getGameMode() != GameMode.CREATIVE) {
                                 if (level < 2) {
@@ -1718,7 +1715,7 @@ public class SomeEvents implements Listener {
                                 }
                                 player.sendMessage(red + "Lights Left: " + gold + (level - 1));
                             }
-                            player.getWorld().strikeLightning(player.getTargetBlock(null, 200).getLocation());
+                            player.getWorld().strikeLightning(player.getTargetBlock((Set<Material>) null, 200).getLocation());
                         } else {
                             player.sendMessage(red + "No Block in your sight!");
                         }

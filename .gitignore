@@ -2,6 +2,7 @@
 *.iml
 *.ipr
 *.iws
+out/
 .idea/
 src/com/LuckyBlock/Commands/GameCommands.java
 src/com/LuckyBlock/Commands/LuckyBlockCommand.java

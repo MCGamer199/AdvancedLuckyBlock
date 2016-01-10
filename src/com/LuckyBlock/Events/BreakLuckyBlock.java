@@ -9,9 +9,9 @@ import com.LuckyBlock.Entities.Soldier.SpawnWay;
 import com.LuckyBlock.Events.ActionPerformer.Actions;
 import com.LuckyBlock.Resources.ParticleEffect;
 import com.LuckyBlock.Resources.SchedulerTask;
-import net.minecraft.server.v1_8_R1.ItemArmor;
-import net.minecraft.server.v1_8_R1.ItemSword;
-import net.minecraft.server.v1_8_R1.ItemTool;
+import net.minecraft.server.v1_8_R3.ItemArmor;
+import net.minecraft.server.v1_8_R3.ItemSword;
+import net.minecraft.server.v1_8_R3.ItemTool;
 import org.bukkit.*;
 import org.bukkit.FireworkEffect.Type;
 import org.bukkit.block.Block;
@@ -21,7 +21,7 @@ import org.bukkit.block.Sign;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
-import org.bukkit.craftbukkit.v1_8_R1.inventory.CraftItemStack;
+import org.bukkit.craftbukkit.v1_8_R3.inventory.CraftItemStack;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
@@ -934,7 +934,7 @@ public class BreakLuckyBlock implements Listener {
                     player.sendMessage(LuckyBlockCommand.getMessage("RepairItems"));
                     for (int x = 0; x < player.getInventory().getSize(); x++) {
                         if (player.getInventory().getItem(x) != null && player.getInventory().getItem(x).getType() != Material.AIR) {
-                            net.minecraft.server.v1_8_R1.ItemStack nms = CraftItemStack.asNMSCopy(player.getInventory().getItem(x));
+                            net.minecraft.server.v1_8_R3.ItemStack nms = CraftItemStack.asNMSCopy(player.getInventory().getItem(x));
                             if (nms.getItem() instanceof ItemTool || nms.getItem() instanceof ItemSword || nms.getItem() instanceof ItemArmor) {
                                 if (player.getInventory().getItem(x).getDurability() > 0) {
                                     player.getInventory().getItem(x).setDurability((short) 0);
@@ -944,7 +944,7 @@ public class BreakLuckyBlock implements Listener {
                     }
                     for (ItemStack item : player.getInventory().getArmorContents()) {
                         if (item != null && item.getType() != Material.AIR) {
-                            net.minecraft.server.v1_8_R1.ItemStack nms = CraftItemStack.asNMSCopy(item);
+                            net.minecraft.server.v1_8_R3.ItemStack nms = CraftItemStack.asNMSCopy(item);
                             if (nms.getItem() instanceof ItemTool || nms.getItem() instanceof ItemSword || nms.getItem() instanceof ItemArmor) {
                                 if (item.getDurability() > 0) {
                                     item.setDurability((short) 0);
