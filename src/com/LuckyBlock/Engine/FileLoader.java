@@ -186,7 +186,7 @@ public class FileLoader {
         chest1.add("Chance:106-108#type:slime_ball#amount:1-3#Enchants:34 10#DisplayName:&2Timed Bomb#Lore:&7Range II");
         chest1.add("Chance:109-110#typeid:303");
     /*
-	chest1.add("Chance:111-113#type:chest#DisplayName:&6(BackPack)#Lore:{randomcolor}{randomcolor}{randomnumber}{playername}%%&718");
+    chest1.add("Chance:111-113#type:chest#DisplayName:&6(BackPack)#Lore:{randomcolor}{randomcolor}{randomnumber}{playername}%%&718");
 	chest1.add("Chance:114-115#type:chest#DisplayName:&6(BackPack)#Lore:{randomcolor}{randomcolor}{randomnumber}{playername}%%&727");
 	chest1.add("Chance:116#type:chest#DisplayName:&6(BackPack)#Lore:{randomcolor}{randomcolor}{randomnumber}{playername}%%&736");
 	*/

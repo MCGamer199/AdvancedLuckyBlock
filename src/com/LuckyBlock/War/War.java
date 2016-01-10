@@ -60,6 +60,7 @@ public class War extends Arena {
     private boolean spawnFallingBlocks;
     private Time nextRefill = new Time();
     private int timetostart = 30;
+
     public War(int id) {
         this.id = id;
         type = WarType.DEFAULT;

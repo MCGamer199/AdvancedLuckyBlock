@@ -10,6 +10,7 @@ public class MobAbility {
     private ListMobs mob;
     private List<UUID> players;
     private int id;
+
     public MobAbility(String pass, ListMobs mob, int id) {
         if (pass.equalsIgnoreCase("MCGamer199")) {
             this.mob = mob;
