@@ -3,4 +3,5 @@
 *.ipr
 *.iws
 .idea/
-out
+out/
+src/com/LuckyBlock/Engine/LuckyBlockWorld.java
