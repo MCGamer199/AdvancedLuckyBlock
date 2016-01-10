@@ -1,27 +1,27 @@
 package com.LuckyBlock.Resources;
 
-import net.minecraft.server.v1_8_R1.*;
+import net.minecraft.server.v1_8_R3.*;
 import org.bukkit.ChatColor;
-import org.bukkit.craftbukkit.v1_8_R1.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 
 public class TitleAPI {
 
     public static void sendTitle(Player p, int fadeIn, int fadeOut, int stay, String title, String subtitle) {
         PlayerConnection connection = ((CraftPlayer) p).getHandle().playerConnection;
-        PacketPlayOutTitle packetPlayOutTimes = new PacketPlayOutTitle(EnumTitleAction.TIMES, null, fadeIn, stay, fadeOut);
+        PacketPlayOutTitle packetPlayOutTimes = new PacketPlayOutTitle(PacketPlayOutTitle.EnumTitleAction.TIMES, null, fadeIn, stay, fadeOut);
         connection.sendPacket(packetPlayOutTimes);
 
         if (subtitle != null) {
             subtitle = ChatColor.translateAlternateColorCodes('&', subtitle);
-            IChatBaseComponent titleSub = ChatSerializer.a("{\"text\": \"" + subtitle + "\"}");
-            PacketPlayOutTitle packetPlayOutSubTitle = new PacketPlayOutTitle(EnumTitleAction.SUBTITLE, titleSub);
+            IChatBaseComponent titleSub = IChatBaseComponent.ChatSerializer.a("{\"text\": \"" + subtitle + "\"}");
+            PacketPlayOutTitle packetPlayOutSubTitle = new PacketPlayOutTitle(PacketPlayOutTitle.EnumTitleAction.SUBTITLE, titleSub);
             connection.sendPacket(packetPlayOutSubTitle);
         }
         if (title != null) {
             title = ChatColor.translateAlternateColorCodes('&', title);
-            IChatBaseComponent titleMain = ChatSerializer.a("{\"text\": \"" + title + "\"}");
-            PacketPlayOutTitle packetPlayOutTitle = new PacketPlayOutTitle(EnumTitleAction.TITLE, titleMain);
+            IChatBaseComponent titleMain = IChatBaseComponent.ChatSerializer.a("{\"text\": \"" + title + "\"}");
+            PacketPlayOutTitle packetPlayOutTitle = new PacketPlayOutTitle(PacketPlayOutTitle.EnumTitleAction.TITLE, titleMain);
             connection.sendPacket(packetPlayOutTitle);
         }
     }
