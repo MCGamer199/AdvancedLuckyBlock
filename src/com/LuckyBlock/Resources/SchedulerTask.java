@@ -5,27 +5,24 @@ import org.bukkit.Bukkit;
 public class SchedulerTask implements Runnable {
 
 
-private int id;
+    private int id;
 
 
-public int getId(){
-return id;
-}
+    public int getId() {
+        return id;
+    }
 
 
-public void setId(int id){
-this.id = id;
-}
+    public void setId(int id) {
+        this.id = id;
+    }
 
 
-@Override
-public void run(){
+    @Override
+    public void run() {
 // Do whatever
-Bukkit.getScheduler().cancelTask(id);
-}
-
-
-
+        Bukkit.getScheduler().cancelTask(id);
+    }
 
 
 }
