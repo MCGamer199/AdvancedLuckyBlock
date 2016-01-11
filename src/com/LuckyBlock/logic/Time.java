@@ -42,13 +42,13 @@ public class Time {
         return hour;
     }
 
-    public void setHour(byte hour) {
-        this.hour = hour;
+    public void setHour(int hour) {
+        this.hour = (byte) hour;
         reloadTime();
     }
 
-    public void setHour(int hour) {
-        this.hour = (byte) hour;
+    public void setHour(byte hour) {
+        this.hour = hour;
         reloadTime();
     }
 
@@ -56,13 +56,13 @@ public class Time {
         return second;
     }
 
-    public void setSecond(byte second) {
-        this.second = second;
+    public void setSecond(int second) {
+        this.second = (byte) second;
         reloadTime();
     }
 
-    public void setSecond(int second) {
-        this.second = (byte) second;
+    public void setSecond(byte second) {
+        this.second = second;
         reloadTime();
     }
 
@@ -70,13 +70,13 @@ public class Time {
         return min;
     }
 
-    public void setMin(byte min) {
-        this.min = min;
+    public void setMin(int min) {
+        this.min = (byte) min;
         reloadTime();
     }
 
-    public void setMin(int min) {
-        this.min = (byte) min;
+    public void setMin(byte min) {
+        this.min = min;
         reloadTime();
     }
 
@@ -84,13 +84,13 @@ public class Time {
         return day;
     }
 
-    public void setDay(int day) {
-        this.day = (byte) day;
+    public void setDay(byte day) {
+        this.day = day;
         reloadTime();
     }
 
-    public void setDay(byte day) {
-        this.day = day;
+    public void setDay(int day) {
+        this.day = (byte) day;
         reloadTime();
     }
 
@@ -98,13 +98,13 @@ public class Time {
         return month;
     }
 
-    public void setMonth(int month) {
-        this.month = (byte) month;
+    public void setMonth(byte month) {
+        this.month = month;
         reloadTime();
     }
 
-    public void setMonth(byte month) {
-        this.month = month;
+    public void setMonth(int month) {
+        this.month = (byte) month;
         reloadTime();
     }
 
