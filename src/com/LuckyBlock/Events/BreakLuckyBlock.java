@@ -95,7 +95,7 @@ public class BreakLuckyBlock implements Listener {
                 }
             }
             if (player.getGameMode() == GameMode.CREATIVE) {
-                if (types.isWorksInCreative() == false) {
+                if (!types.isWorksInCreative()) {
                     return;
                 }
             }
@@ -829,7 +829,7 @@ public class BreakLuckyBlock implements Listener {
 
             } else if (typ.equalsIgnoreCase("SNOWMOVEMENT")) {
                 if (player != null) {
-                    if (LuckyBlock.instance.config.getBoolean("Allow.SnowMoving") == true) {
+                    if (LuckyBlock.instance.config.getBoolean("Allow.SnowMoving")) {
                         String g = LuckyBlockCommand.getMessage("SnowMovingStarted");
                         g = g.replace("%SnowTime%", LuckyBlock.instance.config.getInt("SnowMovementTime") + "");
                         player.sendMessage(g);
@@ -1329,11 +1329,7 @@ public class BreakLuckyBlock implements Listener {
                 }
             }
         }
-        String test = null;
-        if (LuckyBlockAPI.IsLuckyBlock(dim)) {
-            test = "";
-        }
-        if (types != null || test != null) {
+        if (types != null || LuckyBlockAPI.IsLuckyBlock(dim)) {
             if (LuckyBlockAPI.BlockOwner.containsKey(dim)) {
                 UUID uuid = player.getUniqueId();
                 if (!LuckyBlockAPI.BlockOwner.get(dim).equalsIgnoreCase(uuid.toString())) {
@@ -1350,6 +1346,4 @@ public class BreakLuckyBlock implements Listener {
             openLB(block, types, player);
         }
     }
-
-
 }
