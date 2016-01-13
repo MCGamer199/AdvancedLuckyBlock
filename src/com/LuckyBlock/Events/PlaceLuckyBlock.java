@@ -92,7 +92,7 @@ public class PlaceLuckyBlock implements Listener {
                 }
             }
         }
-        if (found == true) {
+        if (found) {
             if (!worlds.contains("*All*")) {
                 if (!worlds.contains(world)) {
                     player.sendMessage(red + "You are not allowed to place lucky block in this world.");
@@ -100,7 +100,7 @@ public class PlaceLuckyBlock implements Listener {
                     return;
                 }
             }
-            if (!player.hasPermission("lb.place")) {
+            if (LuckyBlock.instance.config.getBoolean("UsePermission.placeluckyblock", true) && !player.hasPermission("lb.place")) {
                 event.setCancelled(true);
                 player.sendMessage(ChatColor.translateAlternateColorCodes('&', LuckyBlock.instance.config.getString("Messages.NoPermission.placeluckyblock")));
                 return;
